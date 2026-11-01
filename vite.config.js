@@ -1,7 +1,10 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/',
+  base: '/ludmila-and-gabriel/',
+  server: {
+    host: true,
+  },
   build: {
     outDir: 'dist',
   },
