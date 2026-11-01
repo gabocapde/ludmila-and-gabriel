@@ -209,8 +209,13 @@
 	};
 
 	// Parallax
+	// Stellar sets background-position inline on scroll/resize, which would
+	// override the mobile background-position-x set in style.scss, so skip
+	// it below the sm breakpoint (parallax is a desktop-scroll effect anyway).
 	var parallax = function() {
-		$(window).stellar();
+		if ($(window).width() > 768) {
+			$(window).stellar();
+		}
 	};
 
 	
